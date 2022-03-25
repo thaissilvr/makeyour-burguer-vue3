@@ -1,30 +1,49 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+<div>
+  <Navbar :logo="logo_src" :alt="app_name"/>
+   <router-view/>
+  <Footer />
+ 
+</div> 
 </template>
 
+<script>
+import Navbar from './components/Navbar.vue'
+import Footer from './components/Footer.vue'
+// import Footer from './components/Footer.vue'
+export default {
+  components: {
+    Navbar,
+    Footer
+  },
+  data() {
+    return {
+      logo_src: "/img/logo.png",
+      app_name: "Make your burguer"
+    }
+  }
+  
+}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  margin: 50px;
+  min-height: 250px;
+}
+
+h1 {
   text-align: center;
-  color: #2c3e50;
+  font-size: 42px;
+  margin-bottom: 30px;
+  color: #222 ;
 }
 
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
