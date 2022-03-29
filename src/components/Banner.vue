@@ -12,7 +12,7 @@ export default {
 
 <style scoped>
 #main-banner {
-  background: url("https://github.com/thaissilvr/makeyour-burguer-vue3/blob/main/public/img/burger.jpg?raw=true");
+  background-image: url("https://github.com/thaissilvr/makeyour-burguer-vue3/blob/main/public/img/burger.jpg?raw=true");
   background-position: right bottom -200px;
   background-size: cover;
   height: 500px;
